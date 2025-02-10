@@ -104,17 +104,40 @@ const Hero = () => {
                   </motion.h1>
                 </UpdateFollower>
               </AnimatePresence>
-              <p className="text-sm leading-loose text-white/80">
+
+              <AnimatePresence mode="wait">
+
+              <motion.p 
+              key={activeData.id}
+              variants={fadeUp(0.3)}
+              initial="hidden"
+              animate="show"
+              exit="exit"
+              className="text-sm leading-loose text-white/80">
                 {activeData.subtitle}
-              </p>
-              <button
+              </motion.p>
+
+              </AnimatePresence>
+
+
+              <AnimatePresence mode="wait">
+
+              <motion.button
+               key={activeData.id}
+               variants={fadeUp(0.3)}
+               initial="hidden"
+               animate="show"
+               exit="exit"
                 style={{
                   backgroundColor: activeData.bgColor,
                 }}
                 className=" px-4 py-2 inline-block font-normal rounded-sm"
               >
                 Buy and Listen
-              </button>
+              </motion.button>
+                
+              </AnimatePresence>
+             
 
               <div className="flex item justify-center md:justify-start gap-4 !mt-14">
                 <div className="w-20 h-[1px] bg-white"></div>
@@ -147,11 +170,27 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col justify-end items-center">
-            <img
-              className="w-[300px] md:w-[400px] xl:w-[550px]"
-              src={activeData.image}
-              alt=""
-            />
+            <AnimatePresence mode="wait">
+
+              <motion.img
+                key={activeData.id}
+                initial={{ opacity: 0, scale: 0.9, y: 100 }}
+                animate={{ opacity: 1, scale:1, y: 0 }}
+                transition={{ duration: 0.4, delay:0.2, easeInOut }}
+                exit={{opacity:0, scale:0.9, y:100,
+                  transition:{
+                    duration:0.2
+                  }
+                }}
+                className="w-[300px] md:w-[400px] xl:w-[550px]"
+                src={activeData.image}
+                alt=""
+              />
+
+            </AnimatePresence>
+
+
+
           </div>
 
           <div className="text-3xl text-white fixed bottom-10 right-10 hover:rotate-[360deg] duration-500 z-[99999] mix-blend-difference">
