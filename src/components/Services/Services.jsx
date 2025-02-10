@@ -5,7 +5,7 @@ import icon3 from "./../../assets/icons/obj3.png";
 import { UpdateFollower } from "react-mouse-follower";
 import { easeInOut, motion } from "framer-motion";
 
- export const fadeUp = (delay) => {
+export const fadeUp = (delay) => {
   return {
     hidden: {
       opacity: 0,
@@ -20,7 +20,6 @@ import { easeInOut, motion } from "framer-motion";
         delay: delay,
       },
     },
-   
   };
 };
 const ServicesData = [
