@@ -1,8 +1,10 @@
-# React + Vite
+# • React + Vite + Tailwind + Framer Motion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## • Headphone-Store Landing Page
 
-Currently, two official plugins are available:
+### • Live Demo 1: [Link](https://headphone-store1.vercel.app/)
+### • Live Demo 2: [Link](https://headphone-store1.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## • Preview Gif:
+![Live Demo Screenshot](https://github.com/AbbasRostami/Headphone-Store/blob/master/src/assets/preview/PreviewGif.gif)
